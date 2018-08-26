@@ -1,6 +1,6 @@
 {
   "name": "@division/core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Web Components Pack",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
