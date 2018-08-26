@@ -1,6 +1,6 @@
 {
   "name": "@division/core",
-  "version": "0.1.1",
+  "version": "0.1.1-alpha.0",
   "description": "Web Components Pack",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -14,7 +14,9 @@
     "start": "stencil build --dev --watch --serve",
     "test": "jest",
     "test.watch": "jest --watch",
-    "pbs": "npm publish --access public"
+    "pbs": "npm publish --access public",
+    "pbs:alpha": "npm publish --access public --tag alpha",
+    "pbs:beta": "npm publish --access public --tag beta"
   },
   "dependencies": {
     "@stencil/sass": "^0.1.0"
