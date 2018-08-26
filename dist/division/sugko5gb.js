@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:e}=window.division;class r{render(){return e("div",null,e("p",null,"Hello DvnCard!"))}static get is(){return"dvn-card"}static get style(){return""}}export{r as DvnCard};

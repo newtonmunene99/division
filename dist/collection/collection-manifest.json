@@ -1,0 +1,96 @@
+{
+  "components": [
+    {
+      "tag": "dvn-card",
+      "dependencies": [],
+      "componentClass": "DvnCard",
+      "componentPath": "components/dvn-card/dvn-card.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/dvn-card/dvn-card.scss"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "dvn-gallery",
+      "dependencies": [
+        "dvn-image"
+      ],
+      "componentClass": "DvnGallery",
+      "componentPath": "components/dvn-gallery/dvn-gallery.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/dvn-gallery/dvn-gallery.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "src",
+          "attr": "src"
+        }
+      ],
+      "states": [
+        {
+          "name": "CurrentImageUrl"
+        },
+        {
+          "name": "images"
+        },
+        {
+          "name": "preview"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "dvn-image",
+      "dependencies": [],
+      "componentClass": "DvnImage",
+      "componentPath": "components/dvn-image/dvn-image.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/dvn-image/dvn-image.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "alt",
+          "type": "String",
+          "attr": "alt"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        }
+      ],
+      "states": [
+        {
+          "name": "oldSrc"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "shadow": true
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.11.4",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}
