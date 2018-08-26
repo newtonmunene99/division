@@ -24,16 +24,23 @@
     "jest": "^23.4.2",
     "typescript-plugin-stencil": "^0.1.1-alpha"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
-  },
   "author": "Newton Munene <newtonmunene99@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+  "keywords": [
+    "Web Components",
+    "Image Gallery",
+    "Stencil",
+    "Stencil Js",
+    "Masonry CSS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newtonmunene99/division.git"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
+  "bugs": {
+    "url": "https://github.com/newtonmunene99/division/issues"
+  },
+  "homepage": "https://github.com/newtonmunene99/division/",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
