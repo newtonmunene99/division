@@ -1,0 +1,10 @@
+:host {
+  display: inline-block;
+}
+img {
+  max-width: var(--dvn-image-max-width, 100%);
+  max-height: var(--dvn-image-max-height, 100%);
+  width: var(--dvn-image-width);
+  height: var(--dvn-image-height);
+  border-radius: var(--dvn-image-border-radius, 0px);
+}
