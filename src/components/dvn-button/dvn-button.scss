@@ -1,0 +1,98 @@
+.button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--color, white);
+  border: none;
+  font-size: var(--font-size, 13px);
+  font-weight: var(--font-weight, 700);
+  text-transform: uppercase;
+  outline: 0;
+  letter-spacing: 0.04em;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  width: var(--width, fit-content);
+  height: var(--height, fit-content);
+  font-family: sans-serif;
+  position: relative;
+
+  div {
+    margin: auto 2px;
+  }
+  div.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(231, 231, 236, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    div.loading-spinner {
+      height: 30px;
+      width: 30px;
+      margin: auto;
+      background: transparent;
+      border-radius: 50%;
+      border-top: 2px solid #1d9af2;
+      border-right: 2px solid transparent;
+      border-bottom: none;
+      border-left: none;
+      animation: spinner 700ms linear infinite;
+    }
+  }
+
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.button:hover {
+  transform: translateY(1px);
+}
+.button.disabled {
+}
+.button.disabled:hover {
+  transform: none;
+}
+.button.size-small {
+  padding: 10px 14px;
+}
+.button.size-default {
+  padding: 16px 20px;
+}
+.button.size-large {
+  padding: 20px 24px;
+}
+.button.shape-default {
+  border-radius: 0px;
+}
+.button.shape-round {
+  border-radius: 5px;
+}
+.button.shape-round.size-large {
+  border-radius: 10px;
+}
+.button.fill-clear {
+  background: transparent;
+  color: var(--color, #5851ff);
+}
+.button.fill-outline {
+  background: transparent;
+  border: 2px solid var(--background, #5851ff);
+  color: var(--color, #5851ff);
+}
+.button.fill-filled {
+  background: var(--background, #5851ff);
+}
+.button.position-raised {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+}
+.button.position-flat {
+  box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+}
