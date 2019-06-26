@@ -1,7 +1,7 @@
 {
-  "name": "division",
-  "version": "0.0.1",
-  "description": "Simple Web Components",
+  "name": "@division/core",
+  "version": "0.1.1-alpha.0",
+  "description": "Web Components Pack",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -18,15 +18,31 @@
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "pbs": "npm publish --access public",
+    "pbs:alpha": "npm publish --access public --tag alpha",
+    "pbs:beta": "npm publish --access public --tag beta"
   },
   "devDependencies": {
     "@stencil/core": "1.0.7",
     "tslint": "^5.18.0",
     "tslint-stencil": "^1.0.1"
   },
-  "license": "MIT",
   "dependencies": {
     "@stencil/sass": "^1.0.0"
-  }
+  },
+  "author": "Newton Munene <newtonmunene99@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "Web Components",
+    "Web Compponents Library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newtonmunene99/division.git"
+  },
+  "bugs": {
+    "url": "https://github.com/newtonmunene99/division/issues"
+  },
+  "homepage": "https://github.com/newtonmunene99/division/"
 }
