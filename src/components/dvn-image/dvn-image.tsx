@@ -1,21 +1,16 @@
-import { Component, Element, Prop, State } from '@stencil/core';
+import { Component, Element, Prop, State, h } from "@stencil/core";
 
 @Component({
-  tag: 'dvn-image',
-  styleUrl: 'dvn-image.scss',
+  tag: "dvn-image",
+  styleUrl: "dvn-image.scss",
   shadow: true
 })
 export class DvnImage {
-  @Element()
-  el: HTMLElement;
+  @Element() el: HTMLElement;
 
-  @Prop()
-  src: string;
-  @Prop()
-  alt: string;
-
-  @State()
-  oldSrc: string;
+  @Prop() alt: string;
+  @Prop() src: string;
+  @State() oldSrc: string;
 
   io: IntersectionObserver;
 
@@ -29,18 +24,20 @@ export class DvnImage {
     }
     this.oldSrc = this.src;
   }
+
   handleImage() {
-    const image: HTMLImageElement = this.el.shadowRoot.querySelector('img');
-    image.setAttribute('src', image.getAttribute('data-src'));
+    const image: HTMLImageElement = this.el.shadowRoot.querySelector("img");
+    image.setAttribute("src", image.getAttribute("data-src"));
     image.onload = () => {
-      image.removeAttribute('data-src');
+      image.removeAttribute("data-src");
     };
   }
+
   addIntersectionObserver() {
     if (!this.src) {
       return;
     }
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
       this.io = new IntersectionObserver((data: any) => {
         if (data[0].isIntersecting) {
           this.handleImage();
@@ -48,7 +45,7 @@ export class DvnImage {
         }
       });
 
-      this.io.observe(this.el.shadowRoot.querySelector('img'));
+      this.io.observe(this.el.shadowRoot.querySelector("img"));
     } else {
       setTimeout(() => {
         this.handleImage();

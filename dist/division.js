@@ -1,5 +1,27 @@
-/*!
- * Built with http://stenciljs.com
- * 2018-07-26T17:54:01
- */
-!function(e,t,r,n,i,s,o,c,u,d,a,l,p,h){for((a=e.division=e.division||{}).components=u,(p=u.filter(function(e){return e[2]}).map(function(e){return e[0]})).length&&((l=t.createElement("style")).innerHTML=p.join()+"{visibility:hidden}.hydrated{visibility:inherit}",l.setAttribute("data-styles",""),t.head.insertBefore(l,t.head.firstChild)),function(e,t,r){(e["s-apps"]=e["s-apps"]||[]).push("division"),r.componentOnReady||(r.componentOnReady=function(){var t=this;function r(r){if(t.nodeName.indexOf("-")>0){for(var n=e["s-apps"],i=0,s=0;s<n.length;s++)if(e[n[s]].componentOnReady){if(e[n[s]].componentOnReady(t,r))return;i++}if(i<n.length)return void(e["s-cr"]=e["s-cr"]||[]).push([t,r])}r(null)}return e.Promise?new e.Promise(r):{then:r}})}(e,0,d),i=i||a.resourcesUrl,l=(p=t.querySelectorAll("script")).length-1;l>=0&&!(h=p[l]).src&&!h.hasAttribute("data-resources-url");l--);p=h.getAttribute("data-resources-url"),!i&&p&&(i=p),!i&&h.src&&(i=(p=h.src.split("/").slice(0,-1)).join("/")+(p.length?"/":"")+"division/"),l=t.createElement("script"),function(e,t,r,n){return!(t.search.indexOf("core=esm")>0)&&(!(!(t.search.indexOf("core=es5")>0||"file:"===t.protocol)&&e.customElements&&e.customElements.define&&e.fetch&&e.CSS&&e.CSS.supports&&e.CSS.supports("color","var(--c)")&&"noModule"in r)||function(e){try{return new Function('import("")'),!1}catch(e){}return!0}())}(e,e.location,l)?l.src=i+"division.msyteziu.js":(l.src=i+"division.yv3rghl5.js",l.setAttribute("type","module"),l.setAttribute("crossorigin",!0)),l.setAttribute("data-resources-url",i),l.setAttribute("data-namespace","division"),t.head.appendChild(l)}(window,document,0,0,0,0,0,0,[["dvn-card","sugko5gb",1],["dvn-gallery","k8rzhcd5",1,[["CurrentImageUrl",5],["color",1,0,1,2],["images",5],["preview",5],["src",1]],1],["dvn-image","k8rzhcd5",1,[["alt",1,0,1,2],["el",7],["oldSrc",5],["src",1,0,1,2]],1]],HTMLElement.prototype);
+
+(function(doc){
+  var scriptElm = doc.scripts[doc.scripts.length - 1];
+  var warn = ['[division] Deprecated script, please remove: ' + scriptElm.outerHTML];
+
+  warn.push('To improve performance it is recommended to set the differential scripts in the head as follows:')
+
+  var parts = scriptElm.src.split('/');
+  parts.pop();
+  parts.push('division');
+  var url = parts.join('/');
+
+  var scriptElm = doc.createElement('script');
+  scriptElm.setAttribute('type', 'module');
+  scriptElm.src = url + '/division.esm.js';
+  doc.head.appendChild(scriptElm);
+  warn.push(scriptElm.outerHTML);
+
+  scriptElm = doc.createElement('script');
+  scriptElm.setAttribute('nomodule', '');
+  scriptElm.src = url + '/division.js';
+  doc.head.appendChild(scriptElm);
+  warn.push(scriptElm.outerHTML);
+
+  console.warn(warn.join('\n'));
+
+})(document);

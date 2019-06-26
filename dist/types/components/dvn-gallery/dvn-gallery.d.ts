@@ -1,5 +1,4 @@
-import '../../stencil.core';
-import '../dvn-image/dvn-image';
+import "../dvn-image/dvn-image";
 export declare class DvnGallery {
     color: string;
     src: Array<any>;
@@ -13,5 +12,5 @@ export declare class DvnGallery {
     previous(): void;
     handleImageClose(): void;
     componentWillLoad(): void;
-    render(): JSX.Element[];
+    render(): any[];
 }

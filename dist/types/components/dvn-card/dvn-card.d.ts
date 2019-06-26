@@ -1,4 +1,4 @@
-import '../../stencil.core';
 export declare class DvnCard {
-    render(): JSX.Element;
+    el: HTMLDvnButtonElement;
+    render(): any;
 }

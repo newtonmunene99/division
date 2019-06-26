@@ -1,13 +1,13 @@
-import { Component, Prop, State } from '@stencil/core';
-import '../dvn-image/dvn-image';
+import { Component, Prop, State, h } from "@stencil/core";
+import "../dvn-image/dvn-image";
 @Component({
-  tag: 'dvn-gallery',
-  styleUrl: 'dvn-gallery.scss',
+  tag: "dvn-gallery",
+  styleUrl: "dvn-gallery.scss",
   shadow: true
 })
 export class DvnGallery {
   @Prop()
-  color: string = 'inherit';
+  color: string = "inherit";
   @Prop()
   src: Array<any>;
   @State()
@@ -22,7 +22,7 @@ export class DvnGallery {
     this.CurrentImageUrl = event.target.src;
     this.preview = true;
     this.currentIndex = index;
-    document.querySelector('body').setAttribute('style', 'overflow: hidden;');
+    document.querySelector("body").setAttribute("style", "overflow: hidden;");
   }
 
   handlePreviewImage(event, index) {
@@ -56,15 +56,15 @@ export class DvnGallery {
   handleImageClose() {
     this.CurrentImageUrl = null;
     this.preview = false;
-    document.querySelector('body').setAttribute('style', 'overflow: auto;');
+    document.querySelector("body").setAttribute("style", "overflow: auto;");
   }
 
   componentWillLoad() {
     if (this.src) {
       this.images = this.src;
     } else {
-      let myImageGallery = document.querySelector('dvn-gallery');
-      this.images = [].slice.call(myImageGallery.getElementsByTagName('img'));
+      let myImageGallery = document.querySelector("dvn-gallery");
+      this.images = [].slice.call(myImageGallery.getElementsByTagName("img"));
     }
   }
 
@@ -76,7 +76,7 @@ export class DvnGallery {
         ) : (
           <div
             id="photos"
-            style={{ 'background-color': this.color, overflow: 'auto' }}
+            style={{ "background-color": this.color, overflow: "auto" }}
           >
             {this.src
               ? this.images.map((image, index) => (

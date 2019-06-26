@@ -1,8 +1,7 @@
-import '../../stencil.core';
 export declare class DvnImage {
     el: HTMLElement;
-    src: string;
     alt: string;
+    src: string;
     oldSrc: string;
     io: IntersectionObserver;
     componentDidLoad(): void;
@@ -10,5 +9,5 @@ export declare class DvnImage {
     handleImage(): void;
     addIntersectionObserver(): void;
     removeIntersectionObserver(): void;
-    render(): JSX.Element;
+    render(): any;
 }

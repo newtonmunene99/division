@@ -1,2 +1,0 @@
-/*! Built with http://stenciljs.com */
-import{h}from"./division.core.js";var DvnCard=function(){function e(){}return e.prototype.render=function(){return h("div",null,h("p",null,"Hello DvnCard!"))},Object.defineProperty(e,"is",{get:function(){return"dvn-card"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"style",{get:function(){return""},enumerable:!0,configurable:!0}),e}();export{DvnCard};

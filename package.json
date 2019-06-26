@@ -1,60 +1,32 @@
 {
-  "name": "@division/core",
-  "version": "0.1.1-alpha.0",
-  "description": "Web Components Pack",
-  "module": "dist/esm/index.js",
+  "name": "division",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
   "main": "dist/index.js",
-  "types": "dist/types/components.d.ts",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/division/division.js",
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
-    "test": "jest",
-    "test.watch": "jest --watch",
-    "pbs": "npm publish --access public",
-    "pbs:alpha": "npm publish --access public --tag alpha",
-    "pbs:beta": "npm publish --access public --tag beta"
-  },
-  "dependencies": {
-    "@stencil/sass": "^0.1.0"
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "devDependencies": {
-    "@stencil/core": "^0.11.4",
-    "@types/jest": "^23.3.1",
-    "jest": "^23.4.2",
-    "typescript-plugin-stencil": "^0.1.1-alpha"
+    "@stencil/core": "1.0.7",
+    "tslint": "^5.18.0",
+    "tslint-stencil": "^1.0.1"
   },
-  "author": "Newton Munene <newtonmunene99@gmail.com>",
   "license": "MIT",
-  "keywords": [
-    "Web Components",
-    "Image Gallery",
-    "Stencil",
-    "Stencil Js",
-    "Masonry CSS"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/newtonmunene99/division.git"
-  },
-  "bugs": {
-    "url": "https://github.com/newtonmunene99/division/issues"
-  },
-  "homepage": "https://github.com/newtonmunene99/division/",
-  "jest": {
-    "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx"
-    ]
+  "dependencies": {
+    "@stencil/sass": "^1.0.0"
   }
 }

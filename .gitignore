@@ -1,4 +1,6 @@
+dist/
 www/
+loader/
 
 *~
 *.sw[mnpcod]
@@ -10,6 +12,7 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 
+.stencil/
 .idea/
 .vscode/
 .sass-cache/
@@ -21,3 +24,4 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 .env
+/src/components/dvn-card
