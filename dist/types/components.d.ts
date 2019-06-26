@@ -9,7 +9,10 @@ import { HTMLStencilElement, JSXBase } from './stencil.core';
 
 
 export namespace Components {
-  interface DivButton {
+  interface DvnButton {
+    /**
+    * Determines if a button is disabled or not
+    */
     'disabled': boolean;
     /**
     * Determines the buttons fill type. Default is `filled`
@@ -44,31 +47,56 @@ export namespace Components {
     */
     'type': "button" | "submit" | "reset";
   }
-  interface DivCard {}
+  interface DvnCard {}
+  interface DvnGallery {
+    'color': string;
+    'src': Array<any>;
+  }
+  interface DvnImage {
+    'alt': string;
+    'src': string;
+  }
 }
 
 declare global {
 
 
-  interface HTMLDivButtonElement extends Components.DivButton, HTMLStencilElement {}
-  var HTMLDivButtonElement: {
-    prototype: HTMLDivButtonElement;
-    new (): HTMLDivButtonElement;
+  interface HTMLDvnButtonElement extends Components.DvnButton, HTMLStencilElement {}
+  var HTMLDvnButtonElement: {
+    prototype: HTMLDvnButtonElement;
+    new (): HTMLDvnButtonElement;
   };
 
-  interface HTMLDivCardElement extends Components.DivCard, HTMLStencilElement {}
-  var HTMLDivCardElement: {
-    prototype: HTMLDivCardElement;
-    new (): HTMLDivCardElement;
+  interface HTMLDvnCardElement extends Components.DvnCard, HTMLStencilElement {}
+  var HTMLDvnCardElement: {
+    prototype: HTMLDvnCardElement;
+    new (): HTMLDvnCardElement;
+  };
+
+  interface HTMLDvnGalleryElement extends Components.DvnGallery, HTMLStencilElement {}
+  var HTMLDvnGalleryElement: {
+    prototype: HTMLDvnGalleryElement;
+    new (): HTMLDvnGalleryElement;
+  };
+
+  interface HTMLDvnImageElement extends Components.DvnImage, HTMLStencilElement {}
+  var HTMLDvnImageElement: {
+    prototype: HTMLDvnImageElement;
+    new (): HTMLDvnImageElement;
   };
   interface HTMLElementTagNameMap {
-    'div-button': HTMLDivButtonElement;
-    'div-card': HTMLDivCardElement;
+    'dvn-button': HTMLDvnButtonElement;
+    'dvn-card': HTMLDvnCardElement;
+    'dvn-gallery': HTMLDvnGalleryElement;
+    'dvn-image': HTMLDvnImageElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface DivButton extends JSXBase.HTMLAttributes<HTMLDivButtonElement> {
+  interface DvnButton extends JSXBase.HTMLAttributes<HTMLDvnButtonElement> {
+    /**
+    * Determines if a button is disabled or not
+    */
     'disabled'?: boolean;
     /**
     * Determines the buttons fill type. Default is `filled`
@@ -99,11 +127,21 @@ declare namespace LocalJSX {
     */
     'type'?: "button" | "submit" | "reset";
   }
-  interface DivCard extends JSXBase.HTMLAttributes<HTMLDivCardElement> {}
+  interface DvnCard extends JSXBase.HTMLAttributes<HTMLDvnCardElement> {}
+  interface DvnGallery extends JSXBase.HTMLAttributes<HTMLDvnGalleryElement> {
+    'color'?: string;
+    'src'?: Array<any>;
+  }
+  interface DvnImage extends JSXBase.HTMLAttributes<HTMLDvnImageElement> {
+    'alt'?: string;
+    'src'?: string;
+  }
 
   interface IntrinsicElements {
-    'div-button': DivButton;
-    'div-card': DivCard;
+    'dvn-button': DvnButton;
+    'dvn-card': DvnCard;
+    'dvn-gallery': DvnGallery;
+    'dvn-image': DvnImage;
   }
 }
 

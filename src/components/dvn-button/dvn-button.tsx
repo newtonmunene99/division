@@ -22,11 +22,9 @@ export class DvnButton {
   @State() isLoading: boolean = false;
 
   /**
-   *
-   *
+   * Determines if a button is disabled or not
    * @type {boolean}
-   * @memberof DvnButton
-   * @description Determines if a button is disabled or not
+   *
    */
   @Prop({ mutable: true }) disabled: boolean = false;
   @Watch("disabled")
@@ -38,7 +36,7 @@ export class DvnButton {
    *
    * Determines if the button is disabled because something is loading
    * @type {boolean}
-   * @memberof DvnButton
+   *
    */
   @Prop({ mutable: true }) loading: boolean = false;
   @Watch("loading")

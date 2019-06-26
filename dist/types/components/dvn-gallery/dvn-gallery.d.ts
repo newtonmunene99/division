@@ -1,4 +1,3 @@
-import "../dvn-image/dvn-image";
 export declare class DvnGallery {
     color: string;
     src: Array<any>;

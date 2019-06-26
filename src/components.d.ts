@@ -10,6 +10,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface DvnButton {
+    /**
+    * Determines if a button is disabled or not
+    */
     'disabled': boolean;
     /**
     * Determines the buttons fill type. Default is `filled`
@@ -91,6 +94,9 @@ declare global {
 
 declare namespace LocalJSX {
   interface DvnButton extends JSXBase.HTMLAttributes<HTMLDvnButtonElement> {
+    /**
+    * Determines if a button is disabled or not
+    */
     'disabled'?: boolean;
     /**
     * Determines the buttons fill type. Default is `filled`

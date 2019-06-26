@@ -1,5 +1,4 @@
 import { Component, Prop, State, h } from "@stencil/core";
-import "../dvn-image/dvn-image";
 @Component({
   tag: "dvn-gallery",
   styleUrl: "dvn-gallery.scss",

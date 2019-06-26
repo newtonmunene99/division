@@ -1,7 +1,9 @@
 {
   "entries": [
-    "components\\div-card\\div-card.js",
-    "components\\div-button\\div-button.js"
+    "components\\dvn-button\\dvn-button.js",
+    "components\\dvn-image\\dvn-image.js",
+    "components\\dvn-card\\dvn-card.js",
+    "components\\dvn-gallery\\dvn-gallery.js"
   ],
   "compiler": {
     "name": "@stencil/core",
