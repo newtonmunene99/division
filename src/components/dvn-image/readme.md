@@ -17,7 +17,7 @@
 
 ### Used by
 
- - [dvn-gallery](..\dvn-gallery)
+ - [dvn-gallery](../dvn-gallery)
 
 ### Graph
 ```mermaid

@@ -61,9 +61,12 @@ export interface ComponentDidUnload {
   componentDidUnload: () => void;
 }
 
-export interface ComponentInstance {
+export interface ComponentInterface {
   connectedCallback?: () => void;
   disconnectedCallback?: () => void;
+
+  componentWillRender?: () => Promise<void> | void;
+  componentDidRender?: () => void;
 
   /**
    * The component is about to load and it has not
@@ -107,23 +110,7 @@ export interface ComponentInstance {
    */
   componentDidUpdate?: () => void;
 
-  /**
-   * The component did unload and the element
-   * will be destroyed.
-   */
-  componentDidUnload?: () => void;
-
   render?: () => any;
-
-  /**
-   * Used to dynamically set host element attributes.
-   * Should be placed directly above render()
-   */
-  hostData?: () => {
-    class?: {[className: string]: boolean};
-    style?: any;
-    [attrName: string]: any;
-  };
 
   [memberName: string]: any;
 }
@@ -823,7 +810,6 @@ export namespace JSXBase {
     hidden?: boolean;
     id?: string;
     lang?: string;
-    slot?: string;
     spellCheck?: boolean;
     spellcheck?: boolean | string;
     style?: { [key: string]: string | undefined };
@@ -1142,6 +1128,7 @@ export namespace JSXBase {
 
   export interface DOMAttributes<T = Element> {
     ref?: (elm?: T) => void;
+    slot?: string;
 
     // Clipboard Events
     onCopy?: (event: ClipboardEvent) => void;
@@ -1323,14 +1310,14 @@ export interface FunctionalComponent<T = {}> {
 }
 
 export interface VNode {
-  $tag$?: string | number | Function;
-  $key$?: string | number;
-  $text$?: string;
-  $children$?: VNode[];
+  $flags$: number;
+  $tag$: string | number | Function;
+  $elm$: any;
+  $text$: string;
+  $children$: VNode[];
   $attrs$?: any;
   $name$?: string;
-  $flags$: number;
-  $elm$?: any;
+  $key$?: string | number;
 }
 
 export interface ChildNode {

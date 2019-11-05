@@ -52,7 +52,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [dvn-card](..\dvn-card)
+ - [dvn-card](../dvn-card)
 
 ### Graph
 ```mermaid

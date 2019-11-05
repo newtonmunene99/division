@@ -17,7 +17,7 @@
 
 ### Depends on
 
-- [dvn-image](..\dvn-image)
+- [dvn-image](../dvn-image)
 
 ### Graph
 ```mermaid

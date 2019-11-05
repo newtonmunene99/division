@@ -24,12 +24,12 @@
     "pbs:beta": "npm publish --access public --tag beta"
   },
   "devDependencies": {
-    "@stencil/core": "1.0.7",
-    "tslint": "^5.18.0",
+    "@stencil/core": "1.7.5",
+    "tslint": "^5.20.0",
     "tslint-stencil": "^1.0.1"
   },
   "dependencies": {
-    "@stencil/sass": "^1.0.0"
+    "@stencil/sass": "^1.1.1"
   },
   "author": "Newton Munene <newtonmunene99@gmail.com>",
   "license": "MIT",

@@ -1,14 +1,14 @@
 {
   "entries": [
-    "components\\dvn-button\\dvn-button.js",
-    "components\\dvn-image\\dvn-image.js",
-    "components\\dvn-card\\dvn-card.js",
-    "components\\dvn-gallery\\dvn-gallery.js"
+    "components/dvn-button/dvn-button.js",
+    "components/dvn-card/dvn-card.js",
+    "components/dvn-gallery/dvn-gallery.js",
+    "components/dvn-image/dvn-image.js"
   ],
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.0.7",
-    "typescriptVersion": "3.5.2"
+    "version": "1.7.5",
+    "typescriptVersion": "3.6.3"
   },
   "collections": [],
   "bundles": []
