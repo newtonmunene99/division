@@ -13,12 +13,12 @@ or
 ```js
 <script
       type="module"
-      src="https://cdn.jsdelivr.net/npm/@division/core@latest/dist/division/division.esm.js"
-    ></script>
-    <script
+      src="https://cdn.jsdelivr.net/npm/@division/core@latest/dist/division/division.esm.js">
+</script>
+<script
       nomodule=""
-      src="https://cdn.jsdelivr.net/npm/@division/core@latest/dist/division/division.js"
-    ></script>
+      src="https://cdn.jsdelivr.net/npm/@division/core@latest/dist/division/division.js">
+</script>
 
 ```
 
@@ -39,6 +39,7 @@ or
 | `shape`    | `shape`    | Determines if a button has rounded edges. Default is `default`         | `"default" \| "round"`             | `"default"` |
 | `size`     | `size`     | Determines the size of the button. Default is `default`                | `"default" \| "large" \| "small"`  | `"default"` |
 | `type`     | `type`     | Determines the button type. Default is `button`                        | `"button" \| "reset" \| "submit"`  | `"button"`  |
+
 
 ## About
 
